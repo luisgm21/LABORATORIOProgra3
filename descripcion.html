@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-    <head lang="es">
+<html lang="es">
+    <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Descripcion</title>
@@ -42,20 +42,23 @@
         <div>
             <form action="#" method="get">
                 <label for="tipo_propiedad">Ingrese Tipo de propiedad</label>
-                <input placeholder="Ingrese tipo de propiedad" list="tipo_propiedad" required>
-                <datalist id="tipo_propiedad">
+                <input placeholder="Ingrese tipo de propiedad" list="lista_tipop" id="tipo_propiedad" required>
+                <datalist id="lista_tipop">
                     <option value="Casa">CASA</option>
-                    <option value="Departamento"><strong>DEPARTAMENTO</strong></option>
-                    <option value="Habitacion"><strong>HABITACION</strong></option>
+                    <option value="Departamento">DEPARTAMENTO</option>
+                    <option value="Habitacion">HABITACION</option>
                 </datalist>
                 <br>
                 <label for="tipo_alquiler">Ingrese tipo alquiler</label>
-                <input  placeholder="Ingrese tipo de alquiler" list="tipo_alquiler" name="tipo_alquiler" aria-required="">
-                <datalist  id="tipo_alquiler">
+                <input type="text"  placeholder="Ingrese tipo de alquiler" list="lista_tipoa" id="tipo_alquiler" name="tipo_alquiler">
+                <datalist  id="lista_tipoa">
                     <option value="mensual">Mensual</option>
                     <option value="quincenal">Quincenal</option>
                     <option value="semanal">Semanal</option>
                 </datalist>
+                <br>
+                <label for="capacidad">Ingrese capacidad</label>
+                <input placeholder="Ingrese capacidad" type="number" name="capacidad" id="capacidad">
                 <br>
                 <label for="email">Ingrese su email</label>
                 <input placeholder="Ingrese su email" type="email" name="email" id="email">
