@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,16 +41,79 @@
                     </li>
                     <li class="nav-item"><a href="estadisticas.html" class="nav-link">Estadisticas</a></li>
                 </ul>
+                </div>
                 </nav>
             </div>
-        </div>  
         </header>
         <div class="container-fluid">
             <h1>Registro Propiedad</h1>
         </div>
         <div class="container-fluid">
           <form action="#" method="post">
-
+                <label for="cod_prop">Ingresa Codigo de Propiedad</label>
+                <input type="number" name="cod_prop" id="cod_prop">
+                <br>
+                <label for="tipo_prop">Ingresa Tipo de Propiedad</label>
+                <input type="text" list="list_tipo_prop" name="tipo_prop" id="tipo_prop">
+                <datalist id="list_tipo_prop">
+                    <option value="Casa">Casa</option>
+                    <option value="Departamento">Departamento</option>
+                    <option value="Habitacion">Habitacion</option>
+                </datalist>
+                <br>
+                <label for="mtr2_cubiertos">Ingrese mtrs2 cubiertos</label>
+                <input type="number" name="mtr2_cubiertos" id="mtr2_cubiertos">
+                <br>
+                <label for="mtr2_semicubiertos">Ingrese mtr2_semicubiertos</label>
+                <input type="number" name="mtr2_semicubiertos" id="mtr2_semicubiertos">
+                <br>
+                <label for="capacidad">Ingrese capacidad</label>
+                <input type="number" name="capacidad" id="capacidad">
+                <br>
+                <label for="cant_banios">Ingrese cantidad de baños</label>
+                <input type="number" name="cant_banios" id="cant_banios">
+                <br>
+                <label for="cant_ambientes">Ingrese cantidad de ambientes</label>
+                <input type="number" name="cant_ambientes" id="cant_ambientes">
+                <br><br>
+                <h5>Menu Casa</h5>
+                <small>Las opciones estaran habilitadas si usted elige propiedad tipo casa</small><br>
+                <!--<label>¿Tiene patio ?</label><br>
+                <input type="radio" name="patio" id="patio_si" value="patio_si">
+                <label for="patio_si">si</label><br>
+                <input type="radio" name="patio" id="patio_no" value="patio_no">
+                <label for="patio_no">no</label><br>
+                <label>¿Tiene pileta?</label><br>
+                <input type="radio" name="pileta" id="pileta_si" value="pileta_si">
+                <label for="pileta_si">si</label><br>
+                <input type="radio" name="pileta" id="pileta_no" value="pileta_no">
+                <label for="pileta_no">no</label><br>
+                <label>¿Tiene Terraza?</label><br>
+                <input type="radio" name="terraza" id="terraza_si" value="terraza_si">
+                <label for="terraza_si">si</label><br>
+                <input type="radio" name="terraza" id="terraza_no" value="terraza_no">
+                <label for="terraza_no">no</label><br>-->
+                <input type="checkbox" id="pileta" name="pileta" value="pileta">
+                <label for="pileta">La casa tiene pileta</label><br>
+                <input type="checkbox" id="patio" name="patio" value="patio">
+                <label for="patio">La casa tiene patio</label><br>
+                <input type="checkbox" id="terraza" name="terraza" value="terraza">
+                <label for="terraza">La casa tiene terraza</label>
+                <br><br>
+                <h5>Menu Departamento</h5>
+                <small>Las opciones estaran habilitadas si usted elige propiedad tipo departamento</small><br>
+                <input type="checkbox" id="frente" name="frente" value="frente">
+                <label for="frente">El departamento tiene frente</label><br>
+                <input type="checkbox" id="contrafrente" name="contrafrente" value="contrafrente">
+                <label for="contrafrente">El departamento tiene contrafrente</label><br>
+                <input type="checkbox" id="esp_com" name="esp_com" value="esp_com">
+                <label for="esp_com">El departamento tiene espacios comunes</label>
+                <h5>Menu Habitacion</h5>
+                <small>Las opciones estaran habilitadas si usted elige propiedad tipo habitacion</small><br>
+                <input type="checkbox" id="baño_priv" name="baño_priv" value="baño_priv">
+                <label for="baño_priv">La habitacion tiene baño privado</label><br>
+                <input type="submit" value="Entrar">
+                <input type="reset" value="Cancel">
           </form>
         </div>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
