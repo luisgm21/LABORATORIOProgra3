@@ -48,18 +48,24 @@
         <div class="container-fluid">
             <h1>Registro Propiedad</h1>
         </div>
-        <div class="container-fluid">
+        <div class="container-fluid col-sm-8" id="formulario">
           <form action="#" method="post">
                 <label for="cod_prop">Ingresa Codigo de Propiedad</label>
                 <input type="number" name="cod_prop" id="cod_prop">
                 <br>
+                <label for="fecha_alta">Ingrese Fecha de alta de la propiedad</label>
+                <input type="date" name="fecha_alta" id="fecha_alta">
+                <br>
                 <label for="tipo_prop">Ingresa Tipo de Propiedad</label>
                 <input type="text" list="list_tipo_prop" name="tipo_prop" id="tipo_prop">
                 <datalist id="list_tipo_prop">
-                    <option value="Casa">Casa</option>
-                    <option value="Departamento">Departamento</option>
-                    <option value="Habitacion">Habitacion</option>
+                    <option value="Casa"></option>
+                    <option value="Departamento"></option>
+                    <option value="Habitacion"></option>
                 </datalist>
+                <br>
+                <label for="descrip_prop">Ingrese un descripcion de la propiedad</label><br>
+                <textarea id="descrip_prop" name="descrip_prop" rows="4" cols="50"></textarea>
                 <br>
                 <label for="mtr2_cubiertos">Ingrese mtrs2 cubiertos</label>
                 <input type="number" name="mtr2_cubiertos" id="mtr2_cubiertos">
@@ -75,6 +81,26 @@
                 <br>
                 <label for="cant_ambientes">Ingrese cantidad de ambientes</label>
                 <input type="number" name="cant_ambientes" id="cant_ambientes">
+                <br>
+                <label>¿Tiene Cochera?</label><br>
+                <input type="radio" name="cochera" id="cochera_si" value="cochera_si">
+                <label for="cochera_si">si</label><br>
+                <input type="radio" name="cochera" id="cochera_no" value="cochera_no">
+                <label for="cochera_no">no</label><br>
+                <label for="cant_cochera">Ingrese capacidad de la cochera</label>
+                <input type="number" name="cant_cochera" id="cant_cochera"><br>
+                <small>Cantidad de autos que puede aparcar</small><br>
+                <label for="tipo_alqui">Ingresa Tipo de Alquiler</label>
+                <input type="text" list="list_tipo_alqui" name="tipo_alqui" id="tipo_alqui">
+                <datalist id="list_tipo_alqui">
+                    <option value="Ninguno"></option>
+                    <option value="Diario"></option>
+                    <option value="Semanal"></option>
+                    <option value="Mensual"></option>
+                </datalist>
+                <br>
+                <small>Si la propiedad no es alquilable ponga ninguno</small>
+
                 <br><br>
                 <h5>Menu Casa</h5>
                 <small>Las opciones estaran habilitadas si usted elige propiedad tipo casa</small><br>
@@ -99,7 +125,7 @@
                 <label for="patio">La casa tiene patio</label><br>
                 <input type="checkbox" id="terraza" name="terraza" value="terraza">
                 <label for="terraza">La casa tiene terraza</label>
-                <br><br>
+                <br>
                 <h5>Menu Departamento</h5>
                 <small>Las opciones estaran habilitadas si usted elige propiedad tipo departamento</small><br>
                 <input type="checkbox" id="frente" name="frente" value="frente">
@@ -112,7 +138,9 @@
                 <small>Las opciones estaran habilitadas si usted elige propiedad tipo habitacion</small><br>
                 <input type="checkbox" id="baño_priv" name="baño_priv" value="baño_priv">
                 <label for="baño_priv">La habitacion tiene baño privado</label><br>
-                <input type="submit" value="Entrar">
+                <br><br>
+                <input type="submit" value="Aceptar"><!-- No se bien que poner aqui digamos que puede cambiar
+                todavia -->
                 <input type="reset" value="Cancel">
           </form>
         </div>
