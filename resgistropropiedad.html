@@ -45,59 +45,108 @@
                 </nav>
             </div>
         </header>
-        <div class="container-fluid">
+        <div class="container-fluid col-sm-12">
             <h1>Registro Propiedad</h1>
         </div>
-        <div class="container-fluid col-sm-8" id="formulario">
-          <form action="#" method="post">
-                <label for="cod_prop">Ingresa Codigo de Propiedad</label>
-                <input type="number" name="cod_prop" id="cod_prop">
+        <div class="container-fluid" id="formulario">
+          <form onsubmit="return validacion()" action="#" method="post">
+                <div class="form-row row">
+                    <label for="cod_prop" class="col-sm-3 col-form-label-sm">Ingresa Codigo de Propiedad</label>
+                    <div class="col-sm-9">
+                        <input class="form-control" type="number" name="cod_prop" id="cod_prop">
+                    </div>    
+                </div>
                 <br>
-                <label for="fecha_alta">Ingrese Fecha de alta de la propiedad</label>
-                <input type="date" name="fecha_alta" id="fecha_alta">
+                <div class="form-row row">
+                    <label for="fecha_alta" class="col-sm-3 col-form-label-sm">Ingrese Fecha de alta de la propiedad</label>
+                    <div class="col-sm-9">
+                        <input class="form-control" type="date" name="fecha_alta" id="fecha_alta">
+                        <br>
+                        <input type="button" value="Hoy" id="Hoy">
+                    </div>    
+                </div>
                 <br>
-                <label for="tipo_prop">Ingresa Tipo de Propiedad</label>
-                <input type="text" list="list_tipo_prop" name="tipo_prop" id="tipo_prop">
-                <datalist id="list_tipo_prop">
-                    <option value="Casa"></option>
-                    <option value="Departamento"></option>
-                    <option value="Habitacion"></option>
-                </datalist>
+                <div class="form-row row">
+                    <label class="col-sm-3 col-form-label-sm" for="tipo_prop">Ingresa Tipo de Propiedad</label>
+                    <div class="col-sm-9">
+                        <input class="form-control" type="text" list="list_tipo_prop" name="tipo_prop" id="tipo_prop">
+                        <datalist id="list_tipo_prop">
+                            <option value="Casa"></option>
+                            <option value="Departamento"></option>
+                            <option value="Habitacion"></option>
+                        </datalist>
+                    </div>
+                </div>    
                 <br>
-                <label for="descrip_prop">Ingrese un descripcion de la propiedad</label><br>
-                <textarea id="descrip_prop" name="descrip_prop" rows="4" cols="50"></textarea>
+                <div class="form-row row">
+                    <label class="col-sm-3 col-form-label-sm" for="descrip_prop">Ingrese un descripcion de la propiedad</label><br>
+                    <div class="col-sm-9">
+                        <textarea class="form-control" id="descrip_prop" name="descrip_prop" rows="4" cols="50"></textarea>
+                    </div>
+                </div>
                 <br>
-                <label for="mtr2_cubiertos">Ingrese mtrs2 cubiertos</label>
-                <input type="number" name="mtr2_cubiertos" id="mtr2_cubiertos">
+                <div class="form-row row">
+                    <label class="col-sm-3 col-form-label-sm" for="mtr2_cubiertos">Ingrese mtrs2 cubiertos</label>
+                    <div class="col-sm-9">
+                        <input class="form-control"  type="number" name="mtr2_cubiertos" id="mtr2_cubiertos">
+                    </div>
+                </div>
                 <br>
-                <label for="mtr2_semicubiertos">Ingrese mtr2_semicubiertos</label>
-                <input type="number" name="mtr2_semicubiertos" id="mtr2_semicubiertos">
+                <div class="form-row row">
+                    <label class="col-sm-3 col-form-label-sm" for="mtr2_semicubiertos">Ingrese mtr2_semicubiertos</label>
+                    <div class="col-sm-9">
+                    <input class="form-control" type="number" name="mtr2_semicubiertos" id="mtr2_semicubiertos">
+                    </div>
+                </div>
                 <br>
-                <label for="capacidad">Ingrese capacidad</label>
-                <input type="number" name="capacidad" id="capacidad">
+                <div class="form-row row">
+                    <label class="col-sm-3 col-form-label-sm" for="capacidad">Ingrese capacidad</label>
+                    <div class="col-sm-9">
+                        <input class="form-control" type="number" name="capacidad" id="capacidad">
+                    </div>
+                </div>
                 <br>
-                <label for="cant_banios">Ingrese cantidad de baños</label>
-                <input type="number" name="cant_banios" id="cant_banios">
+                <div class="form-row row">
+                    <label class="col-sm-3 col-form-label-sm" for="cant_banios">Ingrese cantidad de baños</label>
+                    <div class="col-sm-9">
+                        <input class="form-control" type="number" name="cant_banios" id="cant_banios">
+                    </div>
+                </div>
                 <br>
-                <label for="cant_ambientes">Ingrese cantidad de ambientes</label>
-                <input type="number" name="cant_ambientes" id="cant_ambientes">
+                <div class="form-row row">
+                    <label class="col-sm-3 col-form-label-sm" for="cant_ambientes">Ingrese cantidad de ambientes</label>
+                    <div class="col-sm-9">
+                        <input class="form-control" type="number" name="cant_ambientes" id="cant_ambientes">
+                    </div>
+                </div>
                 <br>
                 <label>¿Tiene Cochera?</label><br>
                 <input type="radio" name="cochera" id="cochera_si" value="cochera_si">
-                <label for="cochera_si">si</label><br>
-                <input type="radio" name="cochera" id="cochera_no" value="cochera_no">
-                <label for="cochera_no">no</label><br>
-                <label for="cant_cochera">Ingrese capacidad de la cochera</label>
-                <input type="number" name="cant_cochera" id="cant_cochera"><br>
+                <label for="cochera_si">si</label>
+                <br>
+                <input class="radio" type="radio" name="cochera" id="cochera_no" value="cochera_no">
+                <label for="cochera_no">no</label>
+                <br>
+                <div class="form-row row">
+                    <label class="col-sm-3 col-form-label-sm" for="cant_cochera">Ingrese capacidad de la cochera</label>
+                    <div class="col-sm-9">    
+                        <input class="form-control" type="number" name="cant_cochera" id="cant_cochera">
+                    </div>
+                </div>
+                <br>
                 <small>Cantidad de autos que puede aparcar</small><br>
-                <label for="tipo_alqui">Ingresa Tipo de Alquiler</label>
-                <input type="text" list="list_tipo_alqui" name="tipo_alqui" id="tipo_alqui">
-                <datalist id="list_tipo_alqui">
-                    <option value="Ninguno"></option>
-                    <option value="Diario"></option>
-                    <option value="Semanal"></option>
-                    <option value="Mensual"></option>
-                </datalist>
+                <div class="form-row row">
+                    <label class="col-sm-3 col-form-label-sm" for="tipo_alqui">Ingresa Tipo de Alquiler</label>
+                    <div class="col-sm-9">  
+                        <input class="form-control" type="text" list="list_tipo_alqui" name="tipo_alqui" id="tipo_alqui">
+                        <datalist id="list_tipo_alqui">
+                            <option value="Ninguno"></option>
+                            <option value="Diario"></option>
+                            <option value="Semanal"></option>
+                            <option value="Mensual"></option>
+                        </datalist>
+                    </div>      
+                </div>
                 <br>
                 <small>Si la propiedad no es alquilable ponga ninguno</small>
 
@@ -145,6 +194,7 @@
                 <!-- Hola-->
           </form>
         </div>
+        <script src="js/validacion.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>

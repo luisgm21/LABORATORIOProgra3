@@ -52,27 +52,45 @@
         <!-- Pos nose si va un formulario xd-->
         <div class="container-fluid">
             <form action="#" method="get">
-                <label for="tipo_propiedad">Ingrese Tipo de propiedad</label>
-                <input placeholder="Ingrese tipo de propiedad" list="lista_tipop" id="tipo_propiedad" required>
-                <datalist id="lista_tipop">
-                    <option value="Casa">CASA</option>
-                    <option value="Departamento">DEPARTAMENTO</option>
-                    <option value="Habitacion">HABITACION</option>
-                </datalist>
+                <div class="form-row row">
+                    <label class="col-sm-3 col-form-label-sm" for="tipo_propiedad">Ingrese Tipo de propiedad</label>
+                    <div class="col-sm-9">  
+                        <input class="form-control" placeholder="Ingrese tipo de propiedad" list="lista_tipop" id="tipo_propiedad" required>
+                        <datalist id="lista_tipop">
+                            <option value="Casa">CASA</option>
+                            <option value="Departamento">DEPARTAMENTO</option>
+                            <option value="Habitacion">HABITACION</option>
+                        </datalist>
+                    </div>     
+                </div>
                 <br>
-                <label for="tipo_alquiler">Ingrese tipo alquiler</label>
-                <input type="text"  placeholder="Ingrese tipo de alquiler" list="lista_tipoa" id="tipo_alquiler" name="tipo_alquiler">
-                <datalist  id="lista_tipoa">
-                    <option value="mensual">Mensual</option>
-                    <option value="quincenal">Quincenal</option>
-                    <option value="semanal">Semanal</option>
-                </datalist>
+                <div class="form-row row">
+                    <label class="col-sm-3 col-form-label-sm" for="tipo_alquiler">Ingrese tipo alquiler</label>
+                       <div class="col-sm-9"> 
+                        <input class="form-control" type="text"  placeholder="Ingrese tipo de alquiler" list="lista_tipoa" id="tipo_alquiler" name="tipo_alquiler">
+                        <datalist  id="lista_tipoa">
+                            <option value="mensual">Mensual</option>
+                            <option value="quincenal">Quincenal</option>
+                            <option value="semanal">Semanal</option>
+                        </datalist>
+                    </div>
+                </div>
                 <br>
-                <label for="capacidad">Ingrese capacidad</label>
-                <input placeholder="Ingrese capacidad" type="number" name="capacidad" id="capacidad">
+                <div class="form-row row">
+                <label class="col-sm-3 col-form-label-sm" for="capacidad">Ingrese capacidad</label>
+                    <div class="col-sm-9">
+                        <input class="form-control" placeholder="Ingrese capacidad" type="number" name="capacidad" id="capacidad">
+                    </div>
+                </div>
                 <br>
-                <label for="email">Ingrese su email</label>
-                <input placeholder="Ingrese su email" type="email" name="email" id="email">
+                <div class="form-row row">
+                    <label class="col-sm-3 col-form-label-sm"   label for="email">Ingrese su email</label>
+                    <div class="col-sm-9">
+                        <input class="form-control" placeholder="Ingrese su email" type="email" name="email" id="email">
+                    </div>
+                </div>
+                <input type="submit" value="Aceptar">
+                <input type="reset" value="Reset">
             </form>
         </div>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
