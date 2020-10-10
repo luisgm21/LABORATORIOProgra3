@@ -10,7 +10,7 @@ class Persona(models.Model):
     dni = models.CharField(max_length=8, unique = True)
     nombre_completo = models.CharField(max_length = 200)
     fecha_nacimiento = models.DateField()
-    sexo = models.CharField(max_length = 1, choices = GENERO_OPCIONES)
+    sexo = models.CharField(max_length = 9, choices = GENERO_OPCIONES)
     domicilio = models.CharField(max_length = 250)
     creado = models.DateTimeField(auto_now_add = True)
     modificado = models.DateTimeField(auto_now = True)
